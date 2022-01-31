@@ -3,7 +3,38 @@
     <title>Ayen Neuman's To Do List</title>
    
 </head>
-<body>
-    <div id='container'>hello world!</div>
+<body>  
+
+    <!--Notification box for adding tasks-->
+    <div class="absolute">
+    <input type="text" placeholder="title" id="titleInput" class="form">
+    <input type="text" placeholder="description" id="descriptionInput" class="form">
+    <input type="date" placeholder="dueDate" id="dueDateInput" class="form">
+    <input type="number" placeholder="priority" id="priorityInput" class="form">
+    <input type="text" placeholder="notes" id="notesInput" class="form">
+    <!--<label for="checklist" class="form" id="labelDone">
+        Done? 
+        <input type="checkbox" placeholder="checklist" id="checklistInput">
+    </label> -->
+    <button id="addTask" class="form">Add Task</button>
+    </div>
+
+    <!--Main Page-->
+<div class="wrapper">
+    <div class="Topbar">
+    <p>Ayen Neuman's To Do List</p>
+    <button id="Task">Add Task</button>
+    </div>
+
+    <div id='container'>
+        <div class="project">
+        <div class="content">Hello world!</div>
+        <div class="content">aah</div>
+        </div>
+    </div>
+</div>
+
+
+    
     <script src="main.js"></script>
 </body>

@@ -4,11 +4,15 @@ function project(name, description) {
     this.description = description;
     let content = [];
 
+    const getIndex = function (index) {
+        return content[index];
+    };
+
     const addTask = function (task) {
         return content.push(task);
     };
 
-    return{ name, description, content, addTask};
+    return{ name, description, content, addTask, getIndex};
 
 };
 
@@ -23,10 +27,13 @@ function task(title, description, dueDate, priority, notes, checklist) {
     this.priority = priority
     this.notes = notes
     this.checklist = checklist
-
     this.index = 0
+
+    const info = function () {
+        return (title + ' ' + description + ' ' + dueDate + ' ' + notes);
+    };
     
-    return{ title, description, dueDate, priority, notes, checklist };
+    return{ title, description, dueDate, priority, notes, checklist, info };
 };
 
 const test = function (text) {
