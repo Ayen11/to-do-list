@@ -1,11 +1,12 @@
 import "./style.css"
 import {task, project, test} from "./notes";
-import { printS } from "./loader";
+import { printS, displayProject} from "./loader";
 
 
 
 const containerRef = document.querySelector('#container');
 const taskBoxRef = document.querySelector(".absolute");
+const projectBoxRef = document.querySelector(".project");
 
 const addTaskBoxPageRef = document.querySelector('#addTask')
 addTaskBoxPageRef.onclick = () => taskBoxRef.classList.add('hidden');
@@ -22,12 +23,14 @@ let taskTest2 = new task('title2', "desc", "date", 'prio', 'notes', 'checklist')
 let projectTest = new project('test name', 'test description');
 projectTest.addTask(taskTest);
 projectTest.addTask(taskTest2);
+let projectTest2 = new project('test name', 'test description');
+projectTest2.addTask(taskTest2);
 
-
+/*
 function displayProject (project) {
 
     let length = project.content.length;
-    //containerRef.innerHTML = '';
+    projectBoxRef.innerHTML = '';
 
     for (let n = 0; n < length; n++) {
         let TaskRef = project.getIndex(n);
@@ -35,19 +38,13 @@ function displayProject (project) {
         card.classList.add('content');
         card.textContent = (TaskRef.info());
         console.log(n);
-        containerRef.appendChild(card);
+        projectBoxRef.appendChild(card);
     };
 };
+*/
 
 
-
-displayProject(projectTest);
-
-
-
-
-
-
+displayProject(projectTest2, projectBoxRef);
 
 
 
