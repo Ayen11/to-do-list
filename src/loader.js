@@ -2,7 +2,7 @@ let printS = function () {
     alert('yo');
 };
 
-
+//gets the project to display and the html element to add it to
 function displayProject (project, projectBoxRef) {
 
     let length = project.content.length;
@@ -18,7 +18,24 @@ function displayProject (project, projectBoxRef) {
     };
 };
 
+function displayProjectList (projectArray, ProjectDiv, project, projectBoxRef) {
+
+    let length = projectArray.length;
+    ProjectDiv.innerHTML = '';
+
+    for (let n = 0; n < length; n++) {
+        let ProjectRef = projectArray[n];
+        const card = document.createElement('button');
+        card.classList.add('content');
+        card.textContent = (ProjectRef.name);
+        console.log(n);
+        ProjectDiv.appendChild(card);
+
+        card.addEventListener('click', () => {
+            displayProject(project, projectBoxRef);
+        });
+    };
+};
 
 
-
-export {printS, displayProject};
+export {printS, displayProject, displayProjectList};

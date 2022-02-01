@@ -6,7 +6,7 @@
 <body>  
 
     <!--Notification box for adding tasks-->
-    <div class="absolute">
+    <div id='tasks' class="absolute">
     <input type="text" placeholder="title" id="titleInput" class="form">
     <input type="text" placeholder="description" id="descriptionInput" class="form">
     <input type="date" placeholder="dueDate" id="dueDateInput" class="form">
@@ -19,12 +19,23 @@
     <button id="addTask" class="form">Add Task</button>
     </div>
 
+    <!--Notification box for adding Projects-->
+    <div class="absolute" id="projects">
+    <input type="text" placeholder="title" id="PtitleInput" class="form">
+    <input type="text" placeholder="description" id="PdescriptionInput" class="form">
+    <button id="addProject" class="form">Add Project</button>
+        </div>
+
+
     <!--Main Page-->
 <div class="wrapper">
     <div class="Topbar">
     <p>Ayen Neuman's To Do List</p>
     <button id="Task">Add Task</button>
+    <button id="Project">Add Project</button>
     </div>
+
+    <div class="absolute2" id='projectDiv'>cunt</div>
 
     <div id='container'>
         <div class="project">

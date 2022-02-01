@@ -11,8 +11,12 @@ function project(name, description) {
     const addTask = function (task) {
         return content.push(task);
     };
+    
+    const getName = function (name) {
+        return name;
+    };
 
-    return{ name, description, content, addTask, getIndex};
+    return{ name, description, content, addTask, getIndex, getName};
 
 };
 
